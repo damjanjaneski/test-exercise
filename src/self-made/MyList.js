@@ -36,16 +36,18 @@ export default function MyList() {
       {tasks.map((task, x) => {
         return (
           <div style={{ display: "flex", flexDirection: "row" }} key={x}>
-            <input type="checkbox" defaultChecked={task.completed} />
-            <p>{task.text}</p>
-            <button
-              id={x}
-              onClick={(e) => {
-                removeTask(e);
-              }}
-            >
-              Remove
-            </button>
+            <li>
+              <input type="checkbox" defaultChecked={task.completed} />
+              <span>{task.text}</span>
+              <button
+                id={x}
+                onClick={(e) => {
+                  removeTask(e);
+                }}
+              >
+                Remove
+              </button>
+            </li>
           </div>
         );
       })}
