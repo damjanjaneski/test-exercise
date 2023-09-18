@@ -35,15 +35,7 @@ export default function MyList() {
       <button onClick={addTask}>Add task</button>
       {tasks.map((task, x) => {
         return (
-          <div
-            style={{
-              width: "200px",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-around",
-            }}
-            key={x}
-          >
+          <div style={{ display: "flex", flexDirection: "row" }} key={x}>
             <input type="checkbox" defaultChecked={task.completed} />
             <p>{task.text}</p>
             <button
